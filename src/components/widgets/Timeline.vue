@@ -14,3 +14,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.timeline {
+  position: absolute;
+  color: #fff;
+}
+</style>
