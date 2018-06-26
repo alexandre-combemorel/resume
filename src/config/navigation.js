@@ -17,11 +17,6 @@ export default [
   {
     id: 4,
     name: 'Qualifications',
-    link: '/qualifications',
-  },
-  {
-    id: 5,
-    name: 'Hobbies',
-    link: '/hobbies',
+    link: '/#/qualifications',
   },
 ];

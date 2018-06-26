@@ -21,5 +21,10 @@ export default new Router({
       component: Resume,
       props: { page: 'employmenthistory' },
     },
+    {
+      path: '/qualifications',
+      component: Resume,
+      props: { page: 'qualifications' },
+    },
   ],
 });

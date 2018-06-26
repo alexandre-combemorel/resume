@@ -7,22 +7,32 @@
       <ul>
         <li class="profil__information__name">{{ profil.name }}</li>
         <li class="profil__information__nationality">{{ profil.nationality }}</li>
-        <li><b>E:</b> {{ profil.email }}</li>
-        <li><b>M:</b> {{ profil.phone }}</li>
-        <li></li>
+        <li class="profil__information__email"><b>E:</b> <a :href="'mailto:' + profil.email">{{ profil.email }}</a></li>
+        <li class="profil__information__mobile"><b>M:</b> <a :href="'tel:' + profil.email">{{ profil.phone }}</a></li>
       </ul>
+    </div>
+    <div class="profil__hobbies">
+      <h2 class="profil__hobbies__title">Hobbies</h2>
+      <div class="profil__hobbies__column" v-for="column in hobbies" :key="column.id">
+        <b class="profil__hobbies__column__title">{{ column.section }}</b>
+        <ul>
+          <li class="profil__hobbies__column__item" v-for="item in column.items" :key="item">{{ item }}</li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import profil from '@/config/profil';
+import hobbies from '@/config/hobbies';
 
 export default {
   name: 'Profil',
   data() {
     return {
       profil,
+      hobbies,
     };
   },
 };
@@ -35,7 +45,7 @@ export default {
   width: 25%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 0 $inline-m;
   &__photo {
@@ -55,6 +65,19 @@ export default {
     }
     &__nationality {
       font-style: italic;
+    }
+  }
+  &__hobbies {
+    &__title {
+      border-bottom: solid white 1px;
+    }
+    &__column {
+      &__title {
+        font-weight: bold;
+      }
+      &__item {
+        font-size: 0.8em;
+      }
     }
   }
 }

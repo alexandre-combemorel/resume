@@ -38,7 +38,7 @@ export default {
       background: white;
       color: $secondary;
       font-weight: bold;
-      border-radius: 5px 5px 0 0;
+      border-radius: 5px 0 0 0;
     }
     &__itemsgroup {
       margin-top: $stack-s;
