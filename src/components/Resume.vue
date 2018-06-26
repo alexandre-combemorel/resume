@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Timeline from '@/components/widgets/Timeline';
+import Timeline from '@/components/Timeline';
 import BackgroundAnimation from '@/components/widgets/BackgroundAnimation';
 import Profil from '@/components/Profil';
 
@@ -35,6 +35,7 @@ export default {
   .content {
     position: absolute;
     display: flex;
+    width: 100%;
   }
 }
 </style>

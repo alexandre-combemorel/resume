@@ -1,7 +1,7 @@
 <template>
-  <div class="profil">
+  <section class="profil">
     <div class="profil__photo">
-      <img src="../assets/picture_180x180.jpg"/>
+      <img :src="profil.photo"/>
     </div>
     <div class="profil__information">
       <ul>
@@ -12,8 +12,7 @@
         <li></li>
       </ul>
     </div>
-
-  </div>
+  </section>
 </template>
 
 <script>
@@ -31,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .profil {
-  width: 100%;
+  width: 25%;
   height: 100vh;
   display: flex;
   justify-content: center;
