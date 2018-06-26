@@ -27,7 +27,8 @@ export default {
   display: flex;
   padding: 16px;
   border: 1px solid white;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   width: 800px;
   &__details {
     flex: 0 0 200px;
@@ -45,8 +46,6 @@ export default {
     }
   }
   &__content {
-    p {
-    }
     &__skills {
       font-weight: bold;
       font-style: italic;

@@ -5,10 +5,10 @@
     </div>
     <div class="profil__information">
       <ul>
-        <li>{{ profil.name }}</li>
-        <li>{{ profil.nationality }}</li>
-        <li>E: {{ profil.email }}</li>
-        <li>M: {{ profil.phone }}</li>
+        <li class="profil__information__name">{{ profil.name }}</li>
+        <li class="profil__information__nationality">{{ profil.nationality }}</li>
+        <li><b>E:</b> {{ profil.email }}</li>
+        <li><b>M:</b> {{ profil.phone }}</li>
         <li></li>
       </ul>
     </div>
@@ -31,12 +31,29 @@ export default {
 <style lang="scss" scoped>
 .profil {
   width: 25%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
+  padding: 0 16px;
   &__photo {
-    width: 100%;
+    text-align: center;
+    img {
+      width: 180px;
+    }
+  }
+  &__information {
+    margin-bottom: 16px;
+    li b {
+      font-weight: bold;
+    }
+    &__name {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    &__nationality {
+      font-style: italic;
+    }
   }
 }
 </style>

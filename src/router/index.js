@@ -9,6 +9,17 @@ export default new Router({
     {
       path: '/',
       component: Resume,
+      props: { page: 'skills' },
+    },
+    {
+      path: '/presentation',
+      component: Resume,
+      props: { page: 'presentation' },
+    },
+    {
+      path: '/employmenthistory',
+      component: Resume,
+      props: { page: 'employmenthistory' },
     },
   ],
 });
