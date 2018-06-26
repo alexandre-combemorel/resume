@@ -5,9 +5,10 @@
     </div>
     <div class="profil__information">
       <ul>
-        <li>French</li>
-        <li>E: alexandre.combemorel@gmail.com</li>
-        <li>M: +61 43254221</li>
+        <li>{{ profil.name }}</li>
+        <li>{{ profil.nationality }}</li>
+        <li>E: {{ profil.email }}</li>
+        <li>M: {{ profil.phone }}</li>
         <li></li>
       </ul>
     </div>
@@ -16,11 +17,13 @@
 </template>
 
 <script>
+import profil from '@/config/profil';
+
 export default {
   name: 'Profil',
   data() {
     return {
-      src: '',
+      profil,
     };
   },
 };
