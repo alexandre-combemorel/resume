@@ -6,7 +6,7 @@ export default [
       'AGILE methodologies SCRUM, KANBAN (2 years)',
       'Oracle / MySQL (4 years)',
       'MERISE / UML (2 years)',
-    ]
+    ],
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export default [
       'Nginx (1 year)',
       'CMS Wordpress (2 years)',
       'JQuery (4 years)',
-    ]
+    ],
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export default [
       'HTML5/CSS3 BEM (5 years)',
       'Javascript ES6 (5 years)',
       'Twig (1 year)',
-    ]
+    ],
   },
   {
     id: 4,
@@ -37,6 +37,6 @@ export default [
     items: [
       'English (fluent)',
       'French (native)',
-    ]
+    ],
   },
 ];

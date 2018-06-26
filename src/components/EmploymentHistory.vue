@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/css/variables.scss';
+
 .employment-history {
   color: #fff;
   display: flex;
@@ -54,8 +56,8 @@ export default {
     align-items: flex-end;
     .date {
       justify-content: space-between;
-      margin: 8px;
-      padding: 8px;
+      margin: $inset-s;
+      padding: $inset-s;
       border: 1px solid white;
       font-weight: bold;
       position: relative;
@@ -82,10 +84,10 @@ export default {
         position: relative;
         display: flex;
         &__end {
-          margin-right: 32px;
+          margin-right: $inline-l;
         }
         &__start {
-          margin-left: 32px;
+          margin-left: $inline-l;
         }
       }
     }

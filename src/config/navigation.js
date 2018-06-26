@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Skills',
-    link: '/',
+    link: '/#/',
   },
   {
     id: 2,

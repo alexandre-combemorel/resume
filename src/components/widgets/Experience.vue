@@ -22,10 +22,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/variables.scss';
+
 .experience {
   position: absolute;
   display: flex;
-  padding: 16px;
+  padding: $inset-m;
   border: 1px solid white;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -39,7 +41,7 @@ export default {
       font-style: italic;
     }
     &__picture {
-      margin-top: 8px;
+      margin-top: $stack-s;
       img {
         width: 120px;
       }

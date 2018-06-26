@@ -29,13 +29,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/css/variables.scss';
+
 .profil {
   width: 25%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding: 0 16px;
+  padding: 0 $inline-m;
   &__photo {
     text-align: center;
     img {
@@ -43,7 +45,7 @@ export default {
     }
   }
   &__information {
-    margin-bottom: 16px;
+    margin-bottom: $inline-m;
     li b {
       font-weight: bold;
     }
