@@ -12,4 +12,5 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/reset.css';
+@import 'assets/css/general.scss';
 </style>

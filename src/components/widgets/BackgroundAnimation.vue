@@ -1,7 +1,7 @@
 <template>
   <div class="hexagon__container">
     <div v-for="n in 20" class="hexagon" :id="'hexagon' + n" :key="n">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="30" viewbox="0 0 25.980762113533157 30"><path fill="#45484d" d="M12.990381056766578 0L25.980762113533157 7.5L25.980762113533157 22.5L12.990381056766578 30L0 22.5L0 7.5Z"></path></svg>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="30" viewbox="0 0 25.980762113533157 30"><path d="M12.990381056766578 0L25.980762113533157 7.5L25.980762113533157 22.5L12.990381056766578 30L0 22.5L0 7.5Z"></path></svg>
     </div>
   </div>
 </template>
@@ -60,8 +60,16 @@ export default {
     position: absolute;
     transform: translateX(-100%);
     svg {
-      .hex {
+      path {
         fill: #2c2e31;
+      }
+    }
+    &:hover {
+      animation-duration: 200;
+      svg {
+        path {
+          fill: #cdd2da;
+        }
       }
     }
   }
