@@ -10,6 +10,7 @@
 </template>
 
 <script>
+// Config Files, contains data of the App
 import skills from '@/config/skills';
 
 export default {

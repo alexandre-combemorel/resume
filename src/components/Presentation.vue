@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// Config Files, contains data of the App
 import introduction from '@/config/introduction';
 
 export default {

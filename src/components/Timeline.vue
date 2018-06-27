@@ -18,9 +18,11 @@
 </template>
 
 <script>
+// Widgets components
 import Experience from '@/components/widgets/Experience';
 import Qualification from '@/components/widgets/Qualification';
 
+// Config Files, contains data of the App
 import experiences from '@/config/experiences';
 import qualifications from '@/config/qualifications';
 
@@ -33,12 +35,13 @@ export default {
   },
   data() {
     return {
-      dateSelect: 1,
+      dateSelect: 1, // Define the default date select on load
       experiences,
       qualifications,
     };
   },
   computed: {
+    // According to the page loaded we select the right config files and display the right widget
     blockSelected() {
       return this.page === 'employmenthistory' ? experiences : qualifications;
     },

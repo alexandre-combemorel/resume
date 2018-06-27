@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// Config Files, contains data of the App
 import navigation from '@/config/navigation';
 
 export default {

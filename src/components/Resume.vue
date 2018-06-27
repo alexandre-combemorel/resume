@@ -17,6 +17,7 @@
 </template>
 
 <script>
+// Components list
 import BackgroundAnimation from '@/components/widgets/BackgroundAnimation';
 import Navigation from '@/components/Navigation';
 import Profil from '@/components/Profil';
@@ -24,6 +25,7 @@ import Timeline from '@/components/Timeline';
 import Skills from '@/components/Skills';
 import Presentation from '@/components/Presentation';
 
+// This component define the structure of the App
 export default {
   name: 'Resume',
   props: ['page'],
@@ -39,6 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/css/variables.scss';
+
 .resume {
   width: 100%;
   height: 100vh;

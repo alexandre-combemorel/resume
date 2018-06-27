@@ -24,6 +24,7 @@
 </template>
 
 <script>
+// Config Files, contains data of the App
 import profil from '@/config/profil';
 import hobbies from '@/config/hobbies';
 
