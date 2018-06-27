@@ -70,6 +70,7 @@ export default {
   &__hobbies {
     &__title {
       border-bottom: solid white 1px;
+      margin-bottom: $stack-s;
     }
     &__column {
       &__title {
