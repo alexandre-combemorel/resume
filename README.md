@@ -12,8 +12,6 @@ This project is using the following concept and technologies:
 
 Regarding the versioning please refer to the package.json
 
-The project hasn't been commented yet.
-
 ## Cross compatibility and Responsive design
 At the moment the project doesn't have any mobile / tablet adaptation. I know mobile first... but I wanted to focus on a desktop approach and make a first visual.
 It has only been tested on Chrome 67.0. It should work on all recent browser version but haven't done it yet.
