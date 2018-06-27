@@ -1,12 +1,13 @@
 <template>
-  <section class="employment-history">
-    <div class="employment-history__experiences">
+  <section class="timeline">
+    <div class="timeline__blockslider">
       <transition name="slide-up">
-        <experience v-for="xp in experiences" v-if="xp.id === dateSelect" :xp="xp" :key="xp.id"></experience>
+        <experience v-for="block in blockSelected" v-if="block.id === dateSelect && page === 'employmenthistory'" :xp="block" :key="block.id"></experience>
+        <qualification v-for="block in blockSelected" v-if="block.id === dateSelect && page === 'qualifications'" :ql="block" :key="block.id"></qualification>
       </transition>
     </div>
-    <div class="employment-history__dates">
-      <div class="date" v-for="date in experiences" @click="dateSelect = date.id" :key="date.id">
+    <div class="timeline__dates">
+      <div class="date" v-for="date in blockSelected" @click="dateSelect = date.id" :key="date.id">
         <div class="date__container">
           <div class="date__container__end">{{ date.date_timeline.end }}</div>
           <div class="date__container__start">{{ date.date_timeline.start }}</div>
@@ -18,18 +19,29 @@
 
 <script>
 import Experience from '@/components/widgets/Experience';
+import Qualification from '@/components/widgets/Qualification';
+
 import experiences from '@/config/experiences';
+import qualifications from '@/config/qualifications';
 
 export default {
-  name: 'EmploymentHistory',
+  name: 'Timeline',
+  props: ['page'],
   components: {
     Experience,
+    Qualification,
   },
   data() {
     return {
-      experiences,
       dateSelect: 1,
+      experiences,
+      qualifications,
     };
+  },
+  computed: {
+    blockSelected() {
+      return this.page === 'employmenthistory' ? experiences : qualifications;
+    },
   },
 };
 </script>
@@ -37,14 +49,14 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/css/variables.scss';
 
-.employment-history {
+.timeline {
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  &__experiences {
+  &__blockslider {
     flex: 1 1 100%;
     width: 100%;
     display: flex;

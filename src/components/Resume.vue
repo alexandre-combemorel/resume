@@ -7,7 +7,8 @@
       <navigation></navigation>
       <div class="content__inner">
         <profil></profil>
-        <employment-history v-if="page === 'employmenthistory'"></employment-history>
+        <timeline v-if="page === 'employmenthistory'" :page="page"></timeline>
+        <timeline v-if="page === 'qualifications'" :page="page"></timeline>
         <skills v-if="page === 'skills'"></skills>
         <presentation v-if="page === 'presentation'"></presentation>
       </div>
@@ -19,7 +20,7 @@
 import BackgroundAnimation from '@/components/widgets/BackgroundAnimation';
 import Navigation from '@/components/Navigation';
 import Profil from '@/components/Profil';
-import EmploymentHistory from '@/components/EmploymentHistory';
+import Timeline from '@/components/Timeline';
 import Skills from '@/components/Skills';
 import Presentation from '@/components/Presentation';
 
@@ -30,7 +31,7 @@ export default {
     BackgroundAnimation,
     Navigation,
     Profil,
-    EmploymentHistory,
+    Timeline,
     Skills,
     Presentation,
   },
