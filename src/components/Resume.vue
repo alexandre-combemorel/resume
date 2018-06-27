@@ -4,7 +4,7 @@
       <background-animation></background-animation>
     </div>
     <div class="content">
-      <navigation></navigation>
+      <navigation :page="page"></navigation>
       <div class="content__inner">
         <profil></profil>
         <timeline v-if="page === 'employmenthistory'" :page="page"></timeline>

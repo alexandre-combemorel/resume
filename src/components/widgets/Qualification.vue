@@ -45,8 +45,6 @@ export default {
       color: silver;
       font-style: italic;
     }
-    &__title {
-    }
   }
 }
 </style>
